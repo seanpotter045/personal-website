@@ -4,26 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sean Bolles</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">LinkedIn</a></li>
-                <li><a href="#my-work">My Work</a></li>
-                <li><a href="index.html">Github</a></li>
-                <li><a href="index.html">Resume</a></li>
-                <li><a href="index.html">Contact</a></li>
+                <li>Sean Bolles</li>
+                <li><a href="https://www.linkedin.com/in/sean-bolles-4092b1210">LinkedIn</a></li>
+                <li><a href="https://github.com/seanpotter045">Github</a></li>
+                <li><a href="mailto:seanbolles@comcast.net">Contact</a></li>
             </ul>
         </nav>
         <div class="flex-container">
             <img height="400px" width="300px" src="photos/portrait.jpeg">
             <div class="text-container">
                 <h1>Hey there!</h1>
-                <p>My name is Sean Bolles. I am a <strong>software engineer</strong></p>
-
+                <p>My name is <strong>Sean Bolles</strong>. I am a software engineer who likes 
+                    to build web applications and make some art on the side. <strong>Thanks for stopping by!</strong></p>
+                <div class="button-row">
+                    <a href="#academic-history" class="cta-button">Academic History</a>
+                    <a href="#developed-skills" class="cta-button">Developed Skills</a>
+                    <a href="#previous-employment" class="cta-button">Previous Employment</a>
+                    <a href="#coding-projects" class="cta-button">Coding Projects</a>
+                    <a href="#recent-art" class="cta-button">Recent Art</a>
+                </div>
             </div>
         </div>
     </header>
-</body>
+
+    <section id="academic-history">
+        <div class ="flex-container">
+            <div class="text-container">
+                <h2>Academic History</h2>
+                <p>Attended <strong>Salem State University</strong> in Salem, MA from September 2021 to May 2025</p>
+                <p>Earned a B.S. in <strong>Computer Science</strong> with a concentration in 
+                    <strong>Software Engineering</strong> and a minor in <strong>Mathematics</strong></p>
+                <p>Had a cumulative <strong>GPA of 3.5</strong>; Received Dean's List recognition for academic excellence every semester.</p>
+                <p><strong>Relevant coursework includes:</strong> Software Engineering I & II, Database Systems, Software Design/Programming I & II, 
+                    Robotics and Computer Vision, User Experience and Interface, Calculus I & II, Discrete Structures.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="developed-skills">
+        <div class ="flex-container">
+            <div class="text-container">
+                <h2>Developed Skills</h2>
+                <p><strong>Programming and Markup Languages:</strong> Java, Javascript, Typescript, Python, C, C++, HTML 5, and SQL</p>
+                <p><strong>Technology and Frameworks:</strong> React, Express, NodeJS, Axios, RESTful API, Render, Tailwind CSS</p>
+                <p><strong>Databases:</strong> SQL, Database Design, data extraction through APIs, MongoDB, MySQL</p>
+                <p><strong>Software:</strong> Github, Github Projects, VS Code, IntelliJ, AWS, Postman, Pivotal Tracker, Figma, Word, Excel</p>
+                <p><strong>Development Methods:</strong>  Full Stack Development, Agile/Scrum, 
+                    Continuous Integration/Continuous Deployment (CI/CD), Version Control (Git)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="previous-employment">
+        <div class="flex-container">
+            <div class="text-container">
+                <h2>Previous Employment</h2>
+                <p><strong>Floor Assembly Operator, Semi Products:</strong> - Siemens Healthineers</p>
+                <p><strong>August 2021 - December 2025</strong></p>
+                <P>Performed subassembly of intermediate components and finished sensor modules requiring a high level of accuracy, inspected 
+                    and assembled products in compliance with detailed specifications, prepared and etched sensor module parts for the plasma 
+                    treatment system, and executed gasket welding operations per established operating procedures.</P>
+            </div>
+        </div>
+    </section>
+
+    <section id="coding-projects">
+        <h2>Coding Projects</h2>
+        <div class="flex-container">
+            <img height="300px" src="photos/demeter-screenshot.png">
+            <div class="text-container">
+                <h1>Demeter</h1>
+                <p>Developed a web application that allows users to submit, search for, and review local nature locations 
+                    (i.e. parks, beaches, hiking trails, etc.) and then save the location to their profile. I also 
+                    implemented storage of objects using AWS S3, programmed in Javascript and HTML, user data stored in 
+                    MongoDB, and deployed live on Render</p>
+                <a href="https://demeter-frontend.onrender.com/login" class="cta-button" target="_blank">Check it Out!</a>
+            </div>
+        </div>
+
+        <div class="flex-container">
+                <img height="300px" src="photos/ssusocial-screenshot.png">
+                <div class="text-container">
+                    <h1>SSU Social</h1>
+                    <p>Head of a team discovering and fixing errors in the SSU Social app, a social media website for Salem 
+                        State University students. Also developed the search page for the site, allowing users to search for 
+                        users and posts. It was programmed in Javascript, HTML, Tailwind CSS, and deployed live on Render</p>
+                    <a href="https://ssu-social-app.onrender.com/" class="cta-button" target="_blank">Check it Out!</a>
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <div class="text-container">
+                    <h1>MBTA Scheduling</h1>
+                    <p> Collaborated with a team to write software requirements and design a MERN stack web application that 
+                        displayed updated times and alerts for all stops of MBTA commuter rails lines, subway lines, buses, 
+                        and ferries. The web applicaiton interfaces with the MBTA API to fetch line-specific information, 
+                        alerts, and arrival times. It ran using react, used agile methodology, had a repository on GitHub, 
+                        and deployed in a CI/CD pipeline</p>
+                </div>
+            </div>
+    </section>
+
+    <section id="recent-art">
+        <h2>Recent Art</h2>
+        <div class="grid-container">
+            <img height="300px" src="photos/art/image0.png">
+            <img height="300px" src="photos/art/image1.jpeg">
+            <img height="300px" src="photos/art/image4.png">
+            <img height="300px" src="photos/art/image5.jpeg">
+            <img height="300px" src="photos/art/image7.png">
+            <img height="300px" src="photos/art/image6.jpeg">
+            <img height="300px" src="photos/art/image2.png">
+        </div>
+    </section>
+
+    <div class="flex-container">
+        <img height="300px" src="photos/art/PNGTuber_Closed.PNG">
+        <p><strong>Thanks for Visiting!</strong></p>
+    </div>
+    <script>
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
 </html>
