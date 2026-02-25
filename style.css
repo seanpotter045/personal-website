@@ -13,11 +13,12 @@
 }
 
 :root {
-    --primary-color: #333;
-    --secondary-color: #852525;
-    --background-color: #ffffff;
-    --background-color-secondary: #9fe092;
-    --text-color: #333;
+    --primary-color: #BF700F;
+    --secondary-color: #663F0E;
+    --background-color: #663F0E;
+    --background-color-secondary: #F2D680;
+    --background-color-tertiary: #ffffff;
+    --text-color: #663F0E;
 }
 
 * {
@@ -62,12 +63,26 @@ nav li:first-child {
 }
 
 nav a {
+    position: relative;
     text-decoration: none;
     color: var(--text-color);
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
 }
 
 header, section {
@@ -112,6 +127,7 @@ h1 {
 .button-row .cta-button {
     display: inline-block;
     margin: .5em;
+    color: var(--background-color-tertiary);
 }
 
 .text-container > .cta-button {
@@ -123,19 +139,23 @@ h1 {
 .cta-button {
     margin: .5em;
     display: inline-block;
-    padding: .75em 1.25em;
+    padding: 1em 1.5em; /* larger clickable area */
     background-color: var(--primary-color);
     color: #fff;
     text-decoration: none;
     border-radius: .5em;
     font-weight: 600;
+    font-size: 1.1rem; /* slightly bigger text */
+    text-align: center; /* ensure centered when width grows */
+    min-width: 8rem; /* consistent size when paired */
 }
 
 .button-row {
-    display: flex;
-    justify-content: center;
+    /* two buttons per row; grid makes grouping automatic */
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
     gap: .5em;
-    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
 }
 
@@ -147,6 +167,8 @@ section {
     padding: 3em min(2em, 15%);
     background-color: var(--background-color-secondary);
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 h2 {
@@ -159,9 +181,39 @@ section p {
 }
 
 section img {
-    border-radius: 1em;
+    border-radius: 1.35em;
+    padding: .5em;
 }
 
 section.fade-in {
     animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(3deg) scale(0.95);
+    }
+    50% {
+        transform: rotate(0deg) scale(1);
+    }
+    75% {
+        transform: rotate(-3deg) scale(0.95);
+    }
+}
+
+.wiggle {
+    display: inline-block;
+    animation: wiggle 4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+p {
+    color: var(--text-color);
+}
+
+.footer-text {
+    color: var(--background-color-secondary);
 }
