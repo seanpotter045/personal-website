@@ -12,7 +12,7 @@
     }
 }
 
-:root {
+/*:root {
     --primary-color: #85431e;
     --secondary-color: #34150f;
     --background-color: #34150f;
@@ -20,6 +20,13 @@
     --background-color-tertiary: #EACEAA;
     --text-color: #34150f;
 }
+    */
+    :root {
+    --primary-color: #3c507d;
+    --background-color: #112250;
+    --background-color-secondary: #e0c58f;
+    --background-color-tertiary: #f5f0e9;
+    }
 
 * {
     margin: 0;
@@ -29,7 +36,7 @@
 
 html {
     font-family: Oswald, sans-serif;
-    color: var(--text-color);
+    color: var(--background-color);
     scroll-behavior: smooth;
 }
 
@@ -65,7 +72,7 @@ nav li:first-child {
 nav a {
     position: relative;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--background-color);
 }
 
 nav a::after {
@@ -159,7 +166,7 @@ h1 {
 }
 
 .secondary {
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
 }
 
 section {
@@ -210,9 +217,47 @@ section.fade-in {
 }
 
 p {
-    color: var(--text-color);
+    color: var(--background-color);
 }
 
 .footer-text {
     color: var(--background-color-secondary);
+}
+
+@media (max-width: 1066px){
+    header {
+        text-align: center;
+    }
+
+    header .text-container {
+        padding-top:0;
+    }
+}
+
+@media (max-width: 640px){
+    nav li {
+        display: none;
+    }
+
+    nav li:first-child,
+    nav li:last-child {
+        display: block;
+    }
+
+    header {
+        margin-top: 0;
+    }
+
+    .cta-button {
+        margin-top: .5em;
+        width: 100%;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
 }
