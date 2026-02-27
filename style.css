@@ -11,17 +11,7 @@
         transform: translateY(0);
     }
 }
-
-/*:root {
-    --primary-color: #85431e;
-    --secondary-color: #34150f;
-    --background-color: #34150f;
-    --background-color-secondary: #D39858;
-    --background-color-tertiary: #EACEAA;
-    --text-color: #34150f;
-}
-    */
-    :root {
+:root {
     --primary-color: #3c507d;
     --background-color: #112250;
     --background-color-secondary: #e0c58f;
@@ -44,8 +34,13 @@ body {
     padding: 1em;
     background-color: var(--background-color);
 }
-h1, h2, h3 {
+h1, h2 {
     font-size: 2.5em;
+    font-family: Outfit, sans-serif;
+}
+
+h3 {
+    font-size: 2em;
     font-family: Outfit, sans-serif;
 }
 
@@ -121,12 +116,8 @@ header img {
     flex: 0 1 34em;
 }
 
-h1 {
-    font-size: 2.5rem;
-}
-
 .text-container p {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     margin: .75em 0 1em 0;
     text-align: left;
 }
@@ -177,10 +168,6 @@ section {
     transform: translateY(20px);
 }
 
-h2 {
-    font-size: 2em;
-}
-
 section p {
     font-size: 1.25em;
     margin-top: 1em;
@@ -189,8 +176,10 @@ section p {
 section img {
     border-radius: 1.35em;
     padding: .5em;
-    max-width: 100%;      /* prevent overflow */
-    height: auto;         /* maintain aspect ratio */
+    /* cap the displayed size on wide screens */
+    max-width: 400px;    /* adjust as needed */
+    width: 100%;         /* fill container up to max-width */
+    height: auto;        /* maintain aspect ratio */
 }
 
 /* project images should shrink on narrow viewports */
@@ -224,6 +213,9 @@ section.fade-in {
     display: inline-block;
     animation: wiggle 4s ease-in-out infinite;
     transform-origin: bottom center;
+    /* restrict footer image width on larger screens */
+    max-width: 300px;
+    width: 100%;
 }
 
 p {
@@ -234,6 +226,38 @@ p {
     color: var(--background-color-secondary);
 }
 
+/* center footer content */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    margin-top: 2em;
+}
+
+footer {
+    width: 100%;
+}
+
+/* footer link styling */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 0.5em;
+}
+
+.footer-links a {
+    color: var(--background-color-secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
 @media (max-width: 1066px){
     header {
         text-align: center;
