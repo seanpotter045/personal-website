@@ -13,12 +13,12 @@
 }
 
 :root {
-    --primary-color: #BF700F;
-    --secondary-color: #663F0E;
-    --background-color: #663F0E;
-    --background-color-secondary: #F2D680;
-    --background-color-tertiary: #ffffff;
-    --text-color: #663F0E;
+    --primary-color: #85431e;
+    --secondary-color: #34150f;
+    --background-color: #34150f;
+    --background-color-secondary: #D39858;
+    --background-color-tertiary: #EACEAA;
+    --text-color: #34150f;
 }
 
 * {
@@ -139,19 +139,18 @@ h1 {
 .cta-button {
     margin: .5em;
     display: inline-block;
-    padding: 1em 1.5em; /* larger clickable area */
+    padding: 1em 1.5em;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--background-color-tertiary);
     text-decoration: none;
     border-radius: .5em;
     font-weight: 600;
-    font-size: 1.1rem; /* slightly bigger text */
-    text-align: center; /* ensure centered when width grows */
-    min-width: 8rem; /* consistent size when paired */
+    font-size: 1.1rem;
+    text-align: center;
+    min-width: 8rem;
 }
 
 .button-row {
-    /* two buttons per row; grid makes grouping automatic */
     display: grid;
     grid-template-columns: repeat(2, max-content);
     gap: .5em;
