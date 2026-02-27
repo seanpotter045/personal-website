@@ -176,17 +176,13 @@ section p {
 section img {
     border-radius: 1.35em;
     padding: .5em;
-    /* cap the displayed size on wide screens */
-    max-width: 400px;    /* adjust as needed */
-    width: 100%;         /* fill container up to max-width */
-    height: auto;        /* maintain aspect ratio */
+    max-width: 450px;
 }
 
-/* project images should shrink on narrow viewports */
 @media (max-width: 552px) {
     section img {
-        width: 90%;        /* take most of the container */
-        margin: 0 auto;    /* center if block-level */
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
@@ -213,7 +209,6 @@ section.fade-in {
     display: inline-block;
     animation: wiggle 4s ease-in-out infinite;
     transform-origin: bottom center;
-    /* restrict footer image width on larger screens */
     max-width: 300px;
     width: 100%;
 }
@@ -226,7 +221,6 @@ p {
     color: var(--background-color-secondary);
 }
 
-/* center footer content */
 .footer-container {
     display: flex;
     flex-direction: column;
@@ -241,7 +235,6 @@ footer {
     width: 100%;
 }
 
-/* footer link styling */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -282,7 +275,6 @@ footer {
         margin-top: 0;
     }
 
-    /* make header layout vertical */
     header .flex-container {
         flex-direction: column;
         align-items: center;
@@ -297,7 +289,6 @@ footer {
         width: 100%;
     }
 
-    /* stack buttons in a single column */
     .button-row {
         grid-template-columns: 1fr;
     }
@@ -310,7 +301,6 @@ footer {
         font-size: 1.5rem;
     }
 
-    /* ensure images inside flex containers (header/footer) also shrink */
     .flex-container img {
         width: 90%;
         height: auto;
