@@ -104,12 +104,22 @@ header, section {
     gap: 3em;
 }
 
-header img {
+header .flex-container {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2rem;
+}
 
-    max-width: 100%;
+header img {
+    width: auto;
+    max-width: 36rem;
+    max-height: 20rem;
+    height: auto;
     border-radius: 1em;
-    object-fit: cover;
-    object-position: bottom;
+    object-fit: contain;
+    object-position: center;
+    margin-right: 1.5rem;
+    flex: 0 0 auto;
 }
 
 .text-container {
@@ -179,7 +189,7 @@ section img {
     max-width: 450px;
 }
 
-@media (max-width: 552px) {
+@media (max-width: 750px) {
     section img {
         width: 90%;
         margin: 0 auto;
@@ -251,7 +261,7 @@ footer {
 .footer-links a:hover {
     text-decoration: underline;
 }
-@media (max-width: 1066px){
+@media (max-width: 750px){
     header {
         text-align: center;
     }
@@ -261,15 +271,7 @@ footer {
     }
 }
 
-@media (max-width: 552px){
-    nav li {
-        display: none;
-    }
-
-    nav li:first-child,
-    nav li:last-child {
-        display: block;
-    }
+@media (max-width: 750px){
 
     header {
         margin-top: 0;
@@ -304,5 +306,16 @@ footer {
     .flex-container img {
         width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    nav li {
+        display: none;
+    }
+
+    nav li:first-child,
+    nav li:last-child {
+        display: block;
     }
 }
